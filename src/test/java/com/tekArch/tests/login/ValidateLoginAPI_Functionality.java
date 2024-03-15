@@ -16,21 +16,23 @@ import com.tekArch.utilities.TestDataUtils;
 import io.restassured.response.Response;
 
 @Listeners(com.tekArch.listeners.TestEventListenersUtility.class)
+
 public class ValidateLoginAPI_Functionality extends BaseTest
 {
-	ExtentReportsUtility report=ExtentReportsUtility.getInstance();
+	ExtentReportsUtility report;
     APIHelper apiHelper;
     
     @BeforeClass
     public void beforeClass() {
         apiHelper = new APIHelper();
+        report = ExtentReportsUtility.getInstance();
     }
 
     @Test(priority = 0, description = "validate login functionality with valid credentials")
     public void validateLoginWithValidCredentials() {
         Response login = apiHelper.login(EnvironmentDetails.getProperty("username"), EnvironmentDetails.getProperty("password"));
         Assert.assertEquals(login.getStatusCode(), HttpStatus.SC_CREATED,"error occured with login");
-        report.logTestInfo("successfull login witrh statuscode 201");
+        report.logTestInfo("successfull login with statuscode 201");
         JsonSchemaValidate.validateSchemaInClassPath(login, "ExpectedJsonSchema/LoginResponseSchema.json");
         report.logTestInfo("LoginResponse is validated against expected schema successfully");
        

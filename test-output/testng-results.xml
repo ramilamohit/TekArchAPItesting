@@ -2,54 +2,50 @@
 <testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-03-14T15:10:39 CDT" name="Smoke Suite" finished-at="2024-03-14T15:11:08 CDT" duration-ms="29700">
+  <suite started-at="2024-03-14T23:06:54 CDT" name="Smoke Suite" finished-at="2024-03-14T23:07:13 CDT" duration-ms="18569">
     <groups>
     </groups>
-    <test started-at="2024-03-14T15:10:39 CDT" name="Login functionality" finished-at="2024-03-14T15:10:42 CDT" duration-ms="3003">
-      <class name="com.tekArch.tests.login.ValidateLoginAPI_Functionality">
-        <test-method is-config="true" signature="beforeClass()[pri:0, instance:com.tekArch.tests.login.ValidateLoginAPI_Functionality@692f203f]" started-at="2024-03-14T15:10:39 CDT" name="beforeClass" finished-at="2024-03-14T15:10:39 CDT" duration-ms="553" status="PASS">
+    <test started-at="2024-03-14T23:06:54 CDT" name="Login functionality" finished-at="2024-03-14T23:07:13 CDT" duration-ms="18569">
+      <class name="com.tekArch.tests.CRUD.ValidateAddAndDeleteData_Functionality">
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:com.tekArch.tests.CRUD.ValidateAddAndDeleteData_Functionality@1bb5a082]" started-at="2024-03-14T23:06:57 CDT" name="beforeClass" finished-at="2024-03-14T23:06:57 CDT" duration-ms="234" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method signature="validateLoginWithValidCredentials()[pri:0, instance:com.tekArch.tests.login.ValidateLoginAPI_Functionality@692f203f]" started-at="2024-03-14T15:10:39 CDT" name="validateLoginWithValidCredentials" description="validate login functionality with valid credentials" finished-at="2024-03-14T15:10:41 CDT" duration-ms="1998" status="PASS">
+        <test-method signature="validateAddDataFunctionality()[pri:0, instance:com.tekArch.tests.CRUD.ValidateAddAndDeleteData_Functionality@1bb5a082]" started-at="2024-03-14T23:06:57 CDT" name="validateAddDataFunctionality" description="validate add data functionality" finished-at="2024-03-14T23:06:58 CDT" duration-ms="576" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateAddDataFunctionality -->
+        <test-method signature="validateAddedDataInGetData()[pri:1, instance:com.tekArch.tests.CRUD.ValidateAddAndDeleteData_Functionality@1bb5a082]" started-at="2024-03-14T23:06:58 CDT" name="validateAddedDataInGetData" description="validate added data in the get data object" finished-at="2024-03-14T23:07:02 CDT" depends-on-methods="com.tekArch.tests.CRUD.ValidateAddAndDeleteData_Functionality.validateAddDataFunctionality" duration-ms="4765" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateAddedDataInGetData -->
+        <test-method signature="validateDeleteData()[pri:2, instance:com.tekArch.tests.CRUD.ValidateAddAndDeleteData_Functionality@1bb5a082]" started-at="2024-03-14T23:07:02 CDT" name="validateDeleteData" description="delete data functionality" finished-at="2024-03-14T23:07:03 CDT" depends-on-methods="com.tekArch.tests.CRUD.ValidateAddAndDeleteData_Functionality.validateAddDataFunctionality" duration-ms="340" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateDeleteData -->
+        <test-method signature="validateDeletedDataInGetData()[pri:3, instance:com.tekArch.tests.CRUD.ValidateAddAndDeleteData_Functionality@1bb5a082]" started-at="2024-03-14T23:07:03 CDT" name="validateDeletedDataInGetData" description="validate deleted data in the get data object" finished-at="2024-03-14T23:07:13 CDT" depends-on-methods="com.tekArch.tests.CRUD.ValidateAddAndDeleteData_Functionality.validateDeleteData" duration-ms="9884" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateDeletedDataInGetData -->
+      </class> <!-- com.tekArch.tests.CRUD.ValidateAddAndDeleteData_Functionality -->
+      <class name="com.tekArch.tests.login.ValidateLoginAPI_Functionality">
+        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:com.tekArch.tests.login.ValidateLoginAPI_Functionality@5656be13]" started-at="2024-03-14T23:06:54 CDT" name="beforeSuite" finished-at="2024-03-14T23:06:54 CDT" duration-ms="42" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeSuite -->
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:com.tekArch.tests.login.ValidateLoginAPI_Functionality@5656be13]" started-at="2024-03-14T23:06:54 CDT" name="beforeClass" finished-at="2024-03-14T23:06:55 CDT" duration-ms="497" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method signature="validateLoginWithValidCredentials()[pri:0, instance:com.tekArch.tests.login.ValidateLoginAPI_Functionality@5656be13]" started-at="2024-03-14T23:06:55 CDT" name="validateLoginWithValidCredentials" description="validate login functionality with valid credentials" finished-at="2024-03-14T23:06:56 CDT" duration-ms="1737" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validateLoginWithValidCredentials -->
-        <test-method signature="validateLoginWithInValidCredentials()[pri:1, instance:com.tekArch.tests.login.ValidateLoginAPI_Functionality@692f203f]" started-at="2024-03-14T15:10:41 CDT" name="validateLoginWithInValidCredentials" description="validate login functionality with invalid credentials" finished-at="2024-03-14T15:10:42 CDT" duration-ms="188" status="PASS">
+        <test-method signature="validateLoginWithInValidCredentials()[pri:1, instance:com.tekArch.tests.login.ValidateLoginAPI_Functionality@5656be13]" started-at="2024-03-14T23:06:57 CDT" name="validateLoginWithInValidCredentials" description="validate login functionality with invalid credentials" finished-at="2024-03-14T23:06:57 CDT" duration-ms="187" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validateLoginWithInValidCredentials -->
       </class> <!-- com.tekArch.tests.login.ValidateLoginAPI_Functionality -->
     </test> <!-- Login functionality -->
-    <test started-at="2024-03-14T15:10:42 CDT" name="Add data and delete data functionality" finished-at="2024-03-14T15:11:08 CDT" duration-ms="26362">
-      <class name="com.tekArch.tests.login.ValidateLoginAPI_Functionality">
-        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:com.tekArch.tests.login.ValidateLoginAPI_Functionality@692f203f]" started-at="2024-03-14T15:10:39 CDT" name="beforeSuite" finished-at="2024-03-14T15:10:39 CDT" duration-ms="56" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeSuite -->
-      </class> <!-- com.tekArch.tests.login.ValidateLoginAPI_Functionality -->
-      <class name="com.tekArch.tests.CRUD.ValidateAddAndDeleteData_Functionality">
-        <test-method is-config="true" signature="beforeClass()[pri:0, instance:com.tekArch.tests.CRUD.ValidateAddAndDeleteData_Functionality@385c9627]" started-at="2024-03-14T15:10:42 CDT" name="beforeClass" finished-at="2024-03-14T15:10:42 CDT" duration-ms="358" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeClass -->
-        <test-method signature="validateAddDataFunctionality()[pri:0, instance:com.tekArch.tests.CRUD.ValidateAddAndDeleteData_Functionality@385c9627]" started-at="2024-03-14T15:10:42 CDT" name="validateAddDataFunctionality" description="validate add data functionality" finished-at="2024-03-14T15:10:43 CDT" duration-ms="407" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validateAddDataFunctionality -->
-        <test-method signature="validateAddedDataInGetData()[pri:1, instance:com.tekArch.tests.CRUD.ValidateAddAndDeleteData_Functionality@385c9627]" started-at="2024-03-14T15:10:43 CDT" name="validateAddedDataInGetData" description="validate added data in the get data object" finished-at="2024-03-14T15:10:58 CDT" depends-on-methods="com.tekArch.tests.CRUD.ValidateAddAndDeleteData_Functionality.validateAddDataFunctionality" duration-ms="15212" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validateAddedDataInGetData -->
-        <test-method signature="validateDeleteData()[pri:2, instance:com.tekArch.tests.CRUD.ValidateAddAndDeleteData_Functionality@385c9627]" started-at="2024-03-14T15:10:58 CDT" name="validateDeleteData" description="delete data functionality" finished-at="2024-03-14T15:10:58 CDT" depends-on-methods="com.tekArch.tests.CRUD.ValidateAddAndDeleteData_Functionality.validateAddDataFunctionality" duration-ms="278" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validateDeleteData -->
-        <test-method signature="validateDeletedDataInGetData()[pri:3, instance:com.tekArch.tests.CRUD.ValidateAddAndDeleteData_Functionality@385c9627]" started-at="2024-03-14T15:10:58 CDT" name="validateDeletedDataInGetData" description="validate deleted data in the get data object" finished-at="2024-03-14T15:11:08 CDT" depends-on-methods="com.tekArch.tests.CRUD.ValidateAddAndDeleteData_Functionality.validateDeleteData" duration-ms="10052" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validateDeletedDataInGetData -->
-      </class> <!-- com.tekArch.tests.CRUD.ValidateAddAndDeleteData_Functionality -->
-    </test> <!-- Add data and delete data functionality -->
   </suite> <!-- Smoke Suite -->
 </testng-results>

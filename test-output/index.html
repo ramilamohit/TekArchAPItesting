@@ -55,7 +55,7 @@
                 </li>
                 <li>
                   <a href="#" panel-name="testlist-Smoke_Suite" class="navigator-link ">
-                    <span class="test-stats">2 tests</span>
+                    <span class="test-stats">1 test</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -229,13 +229,9 @@
   &lt;test thread-count=&quot;5&quot; name=&quot;Login functionality&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;com.tekArch.tests.login.ValidateLoginAPI_Functionality&quot;/&gt;
-    &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Login functionality --&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;Add data and delete data functionality&quot;&gt;
-    &lt;classes&gt;
       &lt;class name=&quot;com.tekArch.tests.CRUD.ValidateAddAndDeleteData_Functionality&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Add data and delete data functionality --&gt;
+  &lt;/test&gt; &lt;!-- Login functionality --&gt;
 &lt;/suite&gt; &lt;!-- Smoke Suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -247,10 +243,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Login functionality (1 class)</span>
-              </li>
-              <li>
-                <span class="test-name">Add data and delete data functionality (1 class)</span>
+                <span class="test-name">Login functionality (2 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -278,34 +271,34 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(6);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'validateAddedDataInGetData')
+data.setCell(0, 1, 'validateDeletedDataInGetData')
 data.setCell(0, 2, 'com.tekArch.tests.CRUD.ValidateAddAndDeleteData_Functionality')
-data.setCell(0, 3, 15212);
+data.setCell(0, 3, 9884);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'validateDeletedDataInGetData')
+data.setCell(1, 1, 'validateAddedDataInGetData')
 data.setCell(1, 2, 'com.tekArch.tests.CRUD.ValidateAddAndDeleteData_Functionality')
-data.setCell(1, 3, 10052);
+data.setCell(1, 3, 4765);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'validateLoginWithValidCredentials')
 data.setCell(2, 2, 'com.tekArch.tests.login.ValidateLoginAPI_Functionality')
-data.setCell(2, 3, 1998);
+data.setCell(2, 3, 1737);
 data.setCell(3, 0, 3)
 data.setCell(3, 1, 'validateAddDataFunctionality')
 data.setCell(3, 2, 'com.tekArch.tests.CRUD.ValidateAddAndDeleteData_Functionality')
-data.setCell(3, 3, 407);
+data.setCell(3, 3, 576);
 data.setCell(4, 0, 4)
 data.setCell(4, 1, 'validateDeleteData')
 data.setCell(4, 2, 'com.tekArch.tests.CRUD.ValidateAddAndDeleteData_Functionality')
-data.setCell(4, 3, 278);
+data.setCell(4, 3, 340);
 data.setCell(5, 0, 5)
 data.setCell(5, 1, 'validateLoginWithInValidCredentials')
 data.setCell(5, 2, 'com.tekArch.tests.login.ValidateLoginAPI_Functionality')
-data.setCell(5, 3, 188);
+data.setCell(5, 3, 187);
 window.suiteTableData['Smoke_Suite']= { tableData: data, tableDiv: 'times-div-Smoke_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 28 seconds</span>
+              <span class="suite-total-time">Total running time: 17 seconds</span>
               <div id="times-div-Smoke_Suite">
               </div> <!-- times-div-Smoke_Suite -->
             </div> <!-- times-div -->
@@ -338,38 +331,38 @@ return data;
               </div> <!-- configuration-suite before -->
               <div class="configuration-class before">
                 <span class="method-name">beforeClass</span>
-                <span class="method-start">285 ms</span>
+                <span class="method-start">280 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">validateLoginWithValidCredentials</span>
-                <span class="method-start">850 ms</span>
+                <span class="method-start">787 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">validateLoginWithInValidCredentials</span>
-                <span class="method-start">2870 ms</span>
+                <span class="method-start">2556 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.tekArch.tests.CRUD.ValidateAddAndDeleteData_Functionality</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">beforeClass</span>
-                <span class="method-start">3407 ms</span>
+                <span class="method-start">2748 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">validateAddDataFunctionality</span>
-                <span class="method-start">3766 ms</span>
+                <span class="method-start">2983 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">validateAddedDataInGetData</span>
-                <span class="method-start">4205 ms</span>
+                <span class="method-start">3592 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">validateDeleteData</span>
-                <span class="method-start">19420 ms</span>
+                <span class="method-start">8382 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">validateDeletedDataInGetData</span>
-                <span class="method-start">19703 ms</span>
+                <span class="method-start">8727 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

@@ -7,7 +7,6 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
-
 import com.github.javafaker.Faker;
 import com.tekArch.RequestPOJO.AddDataRequestPOJO;
 import com.tekArch.RequestPOJO.DeleteDataRequestPOJO;
@@ -17,22 +16,26 @@ import com.tekArch.ResponsePOJO.LoginResponsePOJO;
 import com.tekArch.ResponsePOJO.StatusResponsePOJO;
 import com.tekArch.base.APIHelper;
 import com.tekArch.utilities.EnvironmentDetails;
+import com.tekArch.utilities.ExtentReportsUtility;
 import com.tekArch.utilities.JsonSchemaValidate;
 import com.tekArch.utilities.TestDataUtils;
-
 import io.restassured.common.mapper.TypeRef;
 import io.restassured.response.Response;
 
 @Listeners(com.tekArch.listeners.TestEventListenersUtility.class)
+
 public class ValidateAddAndDeleteData_Functionality {
     APIHelper apiHelper;
     String userId, accountNo, departmentNo, salary, pincode;
     private Faker faker;
     String dataId = "";
+	ExtentReportsUtility report;
+
     @BeforeClass
     public void beforeClass() {
         faker = new Faker();
         apiHelper = new APIHelper();
+        report = ExtentReportsUtility.getInstance();
         Response login = apiHelper.login(EnvironmentDetails.getProperty("username"), EnvironmentDetails.getProperty("password"));
         userId = login.getBody().as(new TypeRef<List<LoginResponsePOJO>>() {}).get(0).getUserid();
     }
@@ -45,7 +48,9 @@ public class ValidateAddAndDeleteData_Functionality {
         pincode = faker.address().zipCode();
         AddDataRequestPOJO addDataRequest = AddDataRequestPOJO.builder().accountNo(accountNo).departmentNo(departmentNo).salary(salary).pinCode(pincode).build();
         Response response = apiHelper.addData(addDataRequest);
+        report.logTestInfo("Account number got created "+ accountNo);
         Assert.assertEquals(response.getStatusCode(), HttpStatus.SC_CREATED, "Add data functionality is not working as expected.");
+        report.logTestInfo("Status code" + response.getStatusCode());
         Assert.assertEquals(response.as(AddDataResponsePOJO.class).getStatus(), TestDataUtils.getProperty("successStatusMessage"), "The value of status key is not as expected in response ");
         JsonSchemaValidate.validateSchema(response.asPrettyString(), "StatusResponseSchema.json");
 
@@ -65,6 +70,7 @@ public class ValidateAddAndDeleteData_Functionality {
             Assert.fail("Added data is not available in the get data response");
         }
         dataId = getDataResponse.getId();
+        report.logTestInfo("Department number: "+ getDataResponse.getDepartmentNo());
         Assert.assertEquals(getDataResponse.getDepartmentNo(), departmentNo, "Add data functionality is not working as expected, Department number is not matching");
         Assert.assertEquals(getDataResponse.getSalary(), salary, "Add data functionality is not working as expected, Salary is not matching");
         Assert.assertEquals(getDataResponse.getPinCode(), pincode, "Add data functionality is not working as expected, Pincode is not matching");

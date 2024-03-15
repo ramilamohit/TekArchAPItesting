@@ -7,10 +7,6 @@
     <test thread-count="5" name="Login functionality">
         <classes>
             <class name="com.tekArch.tests.login.ValidateLoginAPI_Functionality"/>
-        </classes>
-    </test>
-    <test thread-count="5" name="Add data and delete data functionality">
-        <classes>
             <class name="com.tekArch.tests.CRUD.ValidateAddAndDeleteData_Functionality"/>
         </classes>
     </test>
